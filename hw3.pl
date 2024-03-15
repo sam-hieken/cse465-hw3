@@ -156,7 +156,7 @@ getStateInfo(Town, State, ZipCode, [_ | RestZipCodes], [_ | RestTowns], [_ | Res
 % State = 'OH' 
 % State = 'PA' 
 % State = 'WI'
-% 
+
 % getStateInfo(_, 'OH', 48122) -> false.
 % ------------------------------------------------
 % #9 (Undergrad/Grad) (15/5 pts)
