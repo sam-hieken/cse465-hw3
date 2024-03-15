@@ -66,6 +66,8 @@ partitionable([H | T], Checked) :- (
 % partitionable([1, 4, 8]). -> false.
 % partitionable([3, 2]). -> false.
 % ------------------------------------------------
+
+
 % #5 (Undergraduate/Graduate) (5/5 pts)
 % Determine whether the given integer number does exist in the given 
 % list of integer numbers
