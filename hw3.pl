@@ -120,6 +120,7 @@ collectOneDigits([_ | T], Rest) :-
 % Determine all places based on given state and zipcode.
 % getStateInfo(PLACE, STATE< ZIPCODE).
 
+
 % Parse the zipcodes file
 :- consult("zipcodes.pl").
 
