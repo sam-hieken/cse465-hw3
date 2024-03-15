@@ -179,6 +179,7 @@ getCommon(STATE1, STATE2, PLACELST) :- 	findall(P1, location(_, P1, STATE1, _, _
 										findall(P2, location(_, P2, STATE2, _, _, _), Places2),
 										commonNames(Places1, Places2, PLACELST).
 
+% Generic rule to find the common elements in two lists.
 commonNames([], _, []).
 commonNames([H | T], L2, [H | L1]):- member(H, L2), !, commonNames(T, L2, L1).
 commonNames([_ | T], L2,    L1):-  commonNames(T, L2, L1).
