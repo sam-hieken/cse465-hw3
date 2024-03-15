@@ -1,5 +1,5 @@
 % hw3.pl
-% ADD YOUR NAME HERE
+% Samuel Hieken
 
 % ------------------------------------------------
 % #1 (Undergraduate/Graduate) (5/5 pts)
@@ -117,7 +117,7 @@ collectOneDigits([_ | T], Rest) :-
 %         location(Z, _, S, _, _, _). 
 % Determine all places based on given state and zipcode.
 % getStateInfo(PLACE, STATE< ZIPCODE).
-:- consult("C:/Users/Sam/Downloads/zipcodes.pl").
+:- consult("zipcodes.pl").
 
 getStateInfo(Town, State, ZipCode) :-
     location(ZipCode, Town, State, _, _, _).
@@ -174,7 +174,10 @@ getStateInfo(Town, State, ZipCode, [_ | RestZipCodes], [_ | RestTowns], [_ | Res
 %    from Prolog library. Being able to learn something
 %    about a new programming language on your own is a skil that takes
 %    practice. 
-% getCommon(STATE1, STATE2, PLACELST).
+
+getCommon(STATE1, STATE2, PLACELST) :- 	findall(P1, location(_, P1, STATE1, _, _, _), Places1),
+										findall(P2, location(_, P2, STATE2, _, _, _), Places2),
+										commonNames(Places1, Places2, PLACELST).
 
 commonNames([], _, []).
 commonNames([H | T], L2, [H | L1]):- member(H, L2), !, commonNames(T, L2, L1).
