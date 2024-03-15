@@ -139,6 +139,7 @@ getStateInfo(Town, State, ZipCode, [_ | RestZipCodes], [_ | RestTowns], [_ | Res
 
 % getStateInfo('Oxford', State, 45056). -> State = 'OH'
 % getStateInfo('Oxford', State, _). -> 
+
 % State = 'AL' 
 % State = 'AR' 
 % State = 'CT' 
